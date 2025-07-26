@@ -140,7 +140,7 @@ const Navbar = () => {
               setModal(true);
             }}
           >
-            Open
+            🛒
           </button>
         </nav>
 

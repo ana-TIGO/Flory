@@ -47,8 +47,7 @@ const Shop = () => {
         className="mt-3 bg-deep text-white py-2 px-4 rounded hover:bg-deep/90 transition-all duration-300
         opacity-0 translate-y-[-20px] animate-fadeInDown delay-500 flex justify-center items-center gap-2"
       >
-        Add to Cart
-        <img src="public/Img/cart.png" width="30px" alt="cart" />
+        Add to Cart 🛒
       </button>
     </Link>
   ));
