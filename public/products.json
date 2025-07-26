@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Red Rose Bouquet",
+    "price": 15.99,
+    "image": "/Img/roses/shop/red-1.jpg",
+    "description": "Beautiful bouquet of vibrant red roses for romantic moments.",
+    "stock":"✅ In Stock"
+  },
+  {
+    "id": 2,
+    "name": "Crimson Roses",
+    "price": 16.5,
+    "image": "/Img/roses/shop/red-2.jpg",
+    "description": "Deep red roses that express passion and deep emotions.",
+    "stock":"✅ In Stock"
+  },
+  {
+    "id": 3,
+    "name": "Scarlet Love",
+    "price": 17.25,
+    "image": "/Img/roses/shop/red-3.jpg",
+    "description": "A luxurious arrangement of scarlet red roses.",
+    "stock":"✅ In Stock"
+  },
+  {
+    "id": 4,
+    "name": "Blush Pink Roses",
+    "price": 18.0,
+    "image": "/Img/roses/shop/pink-1.jpg",
+    "description": "Delicate blush pink roses perfect for sweet occasions.",
+    "stock":"✅ In Stock"
+  },
+  {
+    "id": 5,
+    "name": "Pink Elegance",
+    "price": 18.75,
+    "image": "/Img/roses/shop/pink-2.jpg",
+    "description": "Elegant soft pink roses to express affection and grace.",
+    "stock":"✅ In Stock"
+  },
+  {
+    "id": 6,
+    "name": "Rosy Delight",
+    "price": 19.25,
+    "image": "/Img/roses/shop/pink-3.jpg",
+    "description": "Charming pink bouquet to brighten someone’s day.",
+    "stock":"✅ In Stock"
+  },
+  {
+    "id": 7,
+    "name": "White Serenity",
+    "price": 17.99,
+    "image": "/Img/roses/shop/white-1.jpg",
+    "description": "Pure white roses symbolizing peace, purity, and elegance.",
+    "stock":"✅ In Stock"
+  },
+  {
+    "id": 8,
+    "name": "Ivory Roses",
+    "price": 18.5,
+    "image": "/Img/roses/shop/white-2.jpg",
+    "description": "Classic ivory white roses for timeless beauty.",
+    "stock":"✅ In Stock"
+  },
+  {
+    "id": 9,
+    "name": "Snow Bloom",
+    "price": 19.0,
+    "image": "/Img/roses/shop/white-3.jpg",
+    "description": "A graceful bouquet of snow-white roses.",
+    "stock":"✅ In Stock"
+  }
+]

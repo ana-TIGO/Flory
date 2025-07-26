@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Dancing Script";
+  src: url("./assets/fonts/DancingScript-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.text-gradient-primary {
+  background: linear-gradient(
+    90deg,
+    #000000 0%,
+    #fc2d1f 33%,
+    #ff8fab 66%,
+    #ffffff 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.text-gradient-black {
+  background: linear-gradient(90deg, #000000 0%, #b3b3b3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
