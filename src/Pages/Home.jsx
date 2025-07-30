@@ -49,11 +49,15 @@ export default function Home() {
           isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
         }`}
       >
-        <img
-          className="w-full h-full object-cover"
-          src="/Img/roses/home.jpg"
-          alt="beautiful roses"
-        />
+        <picture>
+          <source srcSet="/Img/roses/home.webp" type="image/webp" />
+          <img
+            className="w-full h-full object-cover"
+            src="/Img/roses/home.jpg"
+            alt="beautiful roses"
+            loading="lazy"
+          />
+        </picture>
       </div>
     </div>
   );
