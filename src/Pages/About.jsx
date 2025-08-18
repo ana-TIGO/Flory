@@ -19,7 +19,7 @@ const About = () => {
         className={`
           transition-all duration-1000 ease-out transform 
           ${show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"} 
-          bg-gradient-to-r from-white/60 via-pink-50/60 to-white/60 backdrop-blur-sm rounded-2xl shadow-xl 
+          bg-gradient-to-r from-white/60 via-pink-50/60 to-white/60 backdrop-blur-md rounded-2xl shadow-xl 
           p-8 max-w-2xl text-center z-40
         `}
       >

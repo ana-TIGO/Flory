@@ -1,34 +1,78 @@
-import { useEffect, useState } from "react";
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
+let Visible = {
+  hidden: {
+    opacity: 0,
+    y: "-100vh",
+  },
+  show: {
+    opacity: 1,
+    y: "0",
+    transition: {
+      duration: 0.4,
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+let parentVariant = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.05,
+    },
+  },
+};
+
+let spanVariant = {
+  hidden: { opacity: 0, y: 20 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.4 },
+  },
+};
+let imgVariant = {
+  hidden: { y: 0 },
+  show: {
+    y: [0, -30, 0],
+    transition: {
+      duration: 1.5,
+      repeat: Infinity,
+      repeatType: "reverse", 
+      ease: "easeInOut",
+    },
+  },
+};
 export default function Home() {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setIsVisible(true);
-    }, 20);
-
-    return () => clearTimeout(timeout);
-  }, []);
-
+  let text1 = "Floré – Beauty in every petal .";
   return (
-    <div
-      className={`flex flex-col sm:flex-row w-full mt-1 transition-opacity duration-1000 ease-in-out ${
-        isVisible ? "opacity-100" : "opacity-0"
-      }`}
+    <motion.div
+      className="flex flex-col sm:flex-row w-full mt-1 bg-gradient-love transition-opacity duration-1000 ease-in-out mb-3 sm:mb-0 "
       style={{ height: "calc(100vh - 4.25rem)" }}
+      variants={Visible}
+      initial="hidden"
+      animate="show"
     >
       {/* LEFT SIDE - TEXT */}
       <div
-        className={`sm:w-1/2 sm:h-full h-1/2 bg-gradient-love flex flex-col items-center justify-center 
-        transform transition-all duration-1000 ease-in-out ${
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
-        }`}
+        className="sm:w-1/2 sm:h-full h-1/2 bg-transparent flex flex-col items-center justify-center 
+        transform transition-all duration-1000 ease-in-out"
       >
-        <h1 className="text-2xl sm:text-4xl md:text-[60px] font-dancing text-gradient-black sm:p-10 p-7">
-          Floré – Beauty in every petal.
-        </h1>
+        <motion.h1
+          variants={parentVariant}
+          initial="hidden"
+          animate="show"
+          className="text-2xl sm:text-4xl md:text-[60px] font-dancing text-gradient-black sm:p-10 p-7"
+        >
+          {text1.split("").map((char, index) => (
+            <motion.span key={index} variants={spanVariant}>
+              {char}
+            </motion.span>
+          ))}
+        </motion.h1>
 
         <h1 className="sm:text-4xl md:text-[60px] text-lg font-dancing text-gradient-black sm:p-10 p-7">
           Welcome to Floré
@@ -44,10 +88,9 @@ export default function Home() {
       </div>
 
       {/* RIGHT SIDE - IMAGE */}
-      <div
-        className={`sm:w-1/2 sm:h-full h-1/2 transform transition-all duration-1000 ease-in-out ${
-          isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
-        }`}
+      <motion.div
+        variants={imgVariant}
+        className="sm:w-1/3  sm:h-3/4 h-1/2 sm:my-auto  rounded-full overflow-hidden"
       >
         <picture>
           <source srcSet="/Img/roses/home.webp" type="image/webp" />
@@ -58,7 +101,7 @@ export default function Home() {
             loading="lazy"
           />
         </picture>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }

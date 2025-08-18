@@ -135,7 +135,7 @@ const Navbar = () => {
             />
           </div>
           <button
-            className="bg-primary p-1 md:p-4 rounded-full"
+            className="bg-pink-100 p-1 md:p-4 rounded-full"
             onClick={() => {
               setModal(true);
             }}
